@@ -1,0 +1,40 @@
+%c-wrap{
+  max-width: map-get($mq, desktop);
+  margin: 0 auto;
+}
+
+%btn-reset{
+  background: none;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+%input{
+  appearance: none;
+  background-image: none;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+
+  &::-ms-expand {
+    border: 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+%link{
+  text-decoration: none;
+  transition: color ease .33s;
+}

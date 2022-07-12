@@ -1,0 +1,41 @@
+$fonts-path: '../fonts/';
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url(#{$fonts-path}Gilroy-Bold.woff) format('woff'),
+  url(#{$fonts-path}Gilroy-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url(#{$fonts-path}Gilroy-Medium.woff) format('woff'),
+  url(#{$fonts-path}Gilroy-Medium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url(#{$fonts-path}Gilroy-Regular.woff) format('woff'),
+  url(#{$fonts-path}Gilroy-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Golos';
+  src: url(#{$fonts-path}GolosText-Medium.woff) format('woff'),
+  url(#{$fonts-path}}GolosText-Medium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Golos';
+  src: url(#{$fonts-path}GolosText-Regular.woff) format('woff'),
+  url(#{$fonts-path}}GolosText-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

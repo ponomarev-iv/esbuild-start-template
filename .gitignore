@@ -1,0 +1,10 @@
+node_modules/
+.idea/
+serve/
+/public/
+!public/mail/
+!public/googlea41a166ea03b0fc0.html
+!public/yandex_467270321ee259d8.txt
+!public/robots.txt
+!public/favicon.ico
+

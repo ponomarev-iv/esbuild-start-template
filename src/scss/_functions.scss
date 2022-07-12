@@ -1,0 +1,16 @@
+@import "vars";
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function rem($px, $rem: $fz-base) {
+  @return strip-unit($px) / strip-unit($rem) + rem;
+}
+
+@function em($px, $rem: $fz-base) {
+  @return strip-unit($px) / strip-unit($rem) + em;
+}

@@ -1,0 +1,35 @@
+// media queries
+$mq: (
+  desktop: 1400px,
+  laptop: 1280px,
+  tablet: 768px,
+  phone: 360px
+);
+
+// fonts
+$ff-base: Gilroy, sans-serif;
+$ff-sec: Golos, sans-serif;
+
+$fz-base: 16px;
+
+// colors
+$color-white: #fff;
+$color-dark-main: #273043;
+$color-accent: #90BC39;
+$color-text-grey: #9297A0;
+$color-dark-blue: #2B3853;
+$color-white-blue: #F0F4FA;
+
+// map theme
+$color-map-dark-blue: #2E3A53;
+$color-map-blue-1: #3A465F;
+$color-map-blue-2: #47536B;
+$color-map-blue-3: #546986;
+$color-map-blue-4: #A3B3C9;
+$color-map-blue-5: #D5DCE5;
+
+:root{
+  --tmpl-color-bg: $color-white;
+  --tmpl-color-black: $color-dark-main;
+  --tmpl-color-white: $color-white;
+}

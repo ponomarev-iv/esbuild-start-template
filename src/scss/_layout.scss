@@ -1,0 +1,53 @@
+@import "vars";
+
+html{
+  font-size: $fz-base;
+  height: 100%;
+  font-family: $ff-base;
+  background-color: var(--tmpl-color-bg);
+  color: var(--tmpl-color-black);
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+  // TODO: temp example
+  padding: 20px 0;
+  background-color: black;
+  color: #fff;
+
+  // TODO: example respond mixin
+  @include respondTo(tablet){
+    padding: 16px 0;
+  }
+}
+
+//empty link
+a[href^="http"]:empty::before{
+  content: attr(href);
+}
+
+//style for simple link
+a[href]:not([class]){
+  color: $color-white;
+  text-decoration: none;
+}
+
