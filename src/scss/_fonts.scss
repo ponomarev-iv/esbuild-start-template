@@ -1,41 +1,55 @@
 $fonts-path: '../fonts/';
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url(#{$fonts-path}Gilroy-Bold.woff) format('woff'),
-  url(#{$fonts-path}Gilroy-Bold.ttf) format('truetype');
+  font-family: 'PHGTL';
+  font-display: swap;
+  src: url(#{$fonts-path}PHGTL.woff2) format('woff2'),
+  url(#{$fonts-path}PHGTL.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT_Fors_Regular';
+  font-display: swap;
+  src: url(#{$fonts-path}TT_Fors_Regular.woff2) format('woff2'),
+  url(#{$fonts-path}TT_Fors_Regular.woff) format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT_Fors_Bold';
+  font-display: swap;
+  src: url(#{$fonts-path}TT_Fors_Bold.woff2) format('woff2'),
+  url(#{$fonts-path}TT_Fors_Bold.woff) format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url(#{$fonts-path}Gilroy-Medium.woff) format('woff'),
-  url(#{$fonts-path}Gilroy-Medium.ttf) format('truetype');
-  font-weight: 500;
-  font-style: normal;
+  font-family: 'TT_Fors_Italic';
+  font-display: swap;
+  src: url(#{$fonts-path}TT_Fors_Italic.woff2) format('woff2'),
+  url(#{$fonts-path}TT_Fors_Italic.woff) format('woff');
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url(#{$fonts-path}Gilroy-Regular.woff) format('woff'),
-  url(#{$fonts-path}Gilroy-Regular.ttf) format('truetype');
+  font-family: 'TT_Autonomous_Regular';
+  font-display: swap;
+  src: url(#{$fonts-path}TT_Autonomous_Regular.woff2) format('woff2'),
+  url(#{$fonts-path}TT_Autonomous_Regular.woff) format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Golos';
-  src: url(#{$fonts-path}GolosText-Medium.woff) format('woff'),
-  url(#{$fonts-path}}GolosText-Medium.ttf) format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Golos';
-  src: url(#{$fonts-path}GolosText-Regular.woff) format('woff'),
-  url(#{$fonts-path}}GolosText-Regular.ttf) format('truetype');
+  font-family: 'TT_Autonomous_Italic';
+  font-display: swap;
+  src: url(#{$fonts-path}TT_Autonomous_Italic.woff2) format('woff2'),
+  url(#{$fonts-path}TT_Autonomous_Italic.woff) format('woff');
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }

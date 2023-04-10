@@ -3,7 +3,7 @@ const { paths } = require('../build-tasks-config.js');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDemo = process.env.NODE_ENV === 'demo';
-const outputDir = isProd ? paths.build.img : paths.serve.img;
+const outputDir = isProd ? paths.build.img : paths.public.img;
 function buildImages() {
     return src(`${paths.src.img}/**/*`)
         .pipe(dest(outputDir));

@@ -1,24 +1,26 @@
 const { src, dest, watch } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('gulp-cssnano');
 const mmq = require('gulp-merge-media-queries');
+const sassGlob = require('gulp-sass-glob')
 const { paths } = require('../build-tasks-config.js');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDemo = process.env.NODE_ENV === 'demo';
-const outputDir = isProd ? paths.build.style : paths.serve.style;
+const outputDir = isProd ? paths.build.style : paths.public.style;
 function buildStyles() {
-    return src(`${paths.src.style}/**/*.scss`)
-        .pipe(sass({
-          includePaths: ['./node_modules']
-        }))
-        .pipe(mmq({
-          log: !isProd
-        }))
-        .pipe(cssnano({
-          zindex: false
-        }))
-        .pipe(dest(outputDir));
+  return src([`${paths.src.entryScss}/*.scss`, `${paths.src.components}/**/*.scss`])
+    .pipe(sassGlob())
+    .pipe(sass({
+      includePaths: ['./node_modules']
+    }).on('error', sass.logError))
+    .pipe(mmq({
+      log: !isProd
+    }))
+    .pipe(cssnano({
+      zindex: false
+    }))
+    .pipe(dest(outputDir));
 }
 
 if (isProd || isDemo) {
@@ -27,7 +29,7 @@ if (isProd || isDemo) {
     buildStyles();
 
     module.exports = function() {
-        watch(`${paths.src.style}/**/*.scss`, buildStyles);
+      watch(`${paths.src.root}/**/*.scss`, buildStyles);
     };
 }
 

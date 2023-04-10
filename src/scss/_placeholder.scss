@@ -1,0 +1,76 @@
+@import "vars";
+@import "mixins";
+
+%c-wrap{
+  max-width: map-get($mq-breakpoints, desktop);
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include respondTo(tablet) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  @include respondTo(desktop-xs) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  @include respondTo(desktop) {
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+  }
+}
+
+%input{
+  appearance: none;
+  background-image: none;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0;
+
+  &::-ms-expand {
+    border: 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+%link{
+  text-decoration: none;
+  transition: color ease .33s;
+}
+
+%btn-reset{
+  background: none;
+  border: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+
+  margin: 0;
+  cursor: pointer;
+}
+
+%nav-link{
+  padding: 1rem 2rem;
+  white-space: nowrap;
+  display: inline-block;
+  color: $color-text-dark;
+  transition: color ease .33s;
+  position: relative;
+
+  &:hover{
+    color: $color-text-hover-white;
+  }
+}

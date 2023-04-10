@@ -1,35 +1,48 @@
-// media queries
-$mq: (
-  desktop: 1400px,
-  laptop: 1280px,
-  tablet: 768px,
-  phone: 360px
+/* Layout */
+$mq-breakpoints: (
+  small: 360px,
+  tablet: 720px,
+  tablet-landscape: 1024px,
+  desktop-xs: 1200px,
+  desktop: 1600px
 );
 
-// fonts
-$ff-base: Gilroy, sans-serif;
-$ff-sec: Golos, sans-serif;
+/* Font-family */
+$ff-fallback: sans-serif;
+$ff-fors-regular: 'Montserrat-Medium', $ff-fallback;
+$ff-fors-bold: 'TT_Fors_Bold', $ff-fallback;
+$ff-fors-italic: 'TT_Fors_Italic', $ff-fallback;
+$ff-autonomous-regular: 'TT_Autonomous_Regular', $ff-fallback;
+$ff-autonomous-italic: 'TT_Autonomous_Italic', $ff-fallback;
+$ff-phgtl: 'PHGTL', $ff-fallback;
 
+/* Fonts */
+$fz-xs: 10px;
+$fz-note: 12px;
+$fz-min-base: 14px;
 $fz-base: 16px;
+$fz-medium: 20px;
+$fz-lg: 24px;
+$fz-xl: 32px;
+$fz-xxl: 40px;
 
-// colors
-$color-white: #fff;
-$color-dark-main: #273043;
-$color-accent: #90BC39;
-$color-text-grey: #9297A0;
-$color-dark-blue: #2B3853;
-$color-white-blue: #F0F4FA;
+/* Colors */
+$color-white: #FFFFFF;
+$color-text-dark: #26292B;
+$color-text-gray: #757779;
+$color-text-light-gray: #CBCBCB;
+$color-text-hover-white: #145969;
+$color-text-hover-dark: #6DCEC2;
+$color-gray-icon: #B6B6B5;
+$color-border-dark-bg: rgba($color-white, .3);
+$color-border-white-bg: #DFDFDF;
+$color-brand-bg: #145969;
+$color-bg-gray-lighten: #F2F6F6;
+$color-light-cyan-bg: #E2F5F3;
 
-// map theme
-$color-map-dark-blue: #2E3A53;
-$color-map-blue-1: #3A465F;
-$color-map-blue-2: #47536B;
-$color-map-blue-3: #546986;
-$color-map-blue-4: #A3B3C9;
-$color-map-blue-5: #D5DCE5;
-
-:root{
-  --tmpl-color-bg: $color-white;
-  --tmpl-color-black: $color-dark-main;
-  --tmpl-color-white: $color-white;
-}
+$color-pink: #CE4979;
+$color-pink-light: #F8E4EB;
+$color-green: #39AC39;
+$color-yellow: #D2AD31;
+$color-bg-gray: #F2F6F7;
+$color-bg-dark: #26292B;

@@ -1,0 +1,11 @@
+@import "mixins";
+@import "vars";
+
+%title{
+  font-family: $ff-phgtl;
+  margin: 0;
+}
+
+%text{
+  margin: 0;
+}

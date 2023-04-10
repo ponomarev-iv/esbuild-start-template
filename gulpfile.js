@@ -8,9 +8,9 @@ const buildImages = require('./gulp-tasks/images.js');
 const buildFonts = require('./gulp-tasks/fonts.js');
 
 const isProd = process.env.NODE_ENV === 'production';
+const isDemo = process.env.NODE_ENV === 'demo';
 
 function clearDir(dir) {
-  console.log(fs.existsSync(`./${dir}`));
     try {
         fs.rmdirSync(`./${dir}`, { recursive: true });
         console.info(`Clear ${dir}`);
@@ -23,13 +23,12 @@ task('buildStyles', buildStyles);
 task('buildHTML', buildHTML);
 task('buildImages', buildImages);
 task('buildFonts', buildFonts);
-
 task('clear', function () {
     clearDir(paths.build.base)
     clearDir(paths.public.base);
 })
 
-if (!isProd) {
+if (!isProd && !isDemo) {
     initBrowserSync();
 }
 
@@ -38,8 +37,7 @@ const tasks = [parallel(['buildStyles', 'buildHTML', 'buildImages', 'buildFonts'
 let build = series(...tasks);
 
 if (isProd) {
-  // build = series('clear', ...tasks);
-  build = series(...tasks);
+  build = series('clear', ...tasks);
 }
 
 exports.default = build;

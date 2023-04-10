@@ -3,7 +3,7 @@ const { paths } = require('../build-tasks-config.js');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDemo = process.env.NODE_ENV === 'demo';
-const outputDir = isProd ? paths.build.fonts : paths.serve.fonts;
+const outputDir = isProd ? paths.build.fonts : paths.public.fonts;
 function buildFonts() {
     return src(`${paths.src.fonts}/**/*`)
         .pipe(dest(outputDir));

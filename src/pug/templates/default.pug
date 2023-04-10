@@ -1,0 +1,12 @@
+doctype html
+html(lang="ru")
+  include ../mixins/svg-use
+  include ../blocks/head
+  body
+    .main-layout.js-page-wrapper
+      .main-layout__body
+        block layout-head
+        block layout-content
+      .main-layout__footer
+        include ../../components/footer/footer
+    block scripts
